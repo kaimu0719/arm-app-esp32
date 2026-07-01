@@ -8,3 +8,6 @@ dependencies.lock
 managed_components/
 
 .DS_Store
+
+.cache/
+.vscode/
