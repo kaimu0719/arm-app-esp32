@@ -1,5 +1,5 @@
 idf_component_register(
   SRCS "main.c"
   INCLUDE_DIRS "."
-  REQUIRES mruby_component
+  REQUIRES mruby_component esp_driver_gpio
 )
