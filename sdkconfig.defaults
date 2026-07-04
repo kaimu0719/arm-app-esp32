@@ -1,1 +1,5 @@
 CONFIG_ESP_MAIN_TASK_STACK_SIZE=32768
+
+# 実機のフラッシュは4MB。既定の2MBのままだと起動毎に警告が出る＆全容量を使えない。
+# （選択肢型の設定なので、使いたい選択肢 _4MB を y にする）
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
