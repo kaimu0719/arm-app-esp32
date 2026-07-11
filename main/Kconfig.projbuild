@@ -1,0 +1,20 @@
+# このファイルは「プロジェクト独自の設定項目」を menuconfig に追加する。
+# IDF が main/Kconfig.projbuild を自動で拾い、menuconfig のメニューに表示する。
+# ここで定義した項目は sdkconfig に保存され（gitignore済み＝gitに載らない）、
+# C からは CONFIG_<名前> で参照できる。
+
+menu "WiFi Configuration"
+
+    config WIFI_SSID
+        string "WiFi SSID"
+        default ""
+        help
+            接続先の WiFi ネットワーク名（SSID）。※ESP32 は 2.4GHz のみ対応。
+
+    config WIFI_PASSWORD
+        string "WiFi Password"
+        default ""
+        help
+            WiFi パスワード（WPA/WPA2）。
+
+endmenu

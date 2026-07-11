@@ -2,6 +2,7 @@ idf_component_register(
   SRCS "main.c"
   INCLUDE_DIRS "."
   REQUIRES mruby_component esp_driver_gpio joltwallet__littlefs
+           esp_wifi nvs_flash esp_netif esp_event
 )
 
 # main/storage/ の中身を LittleFS イメージ(storage.bin)に固め、storage 区画へ焼く。
