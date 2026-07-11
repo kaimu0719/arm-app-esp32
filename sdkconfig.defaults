@@ -3,3 +3,8 @@ CONFIG_ESP_MAIN_TASK_STACK_SIZE=32768
 # 実機のフラッシュは4MB。既定の2MBのままだと起動毎に警告が出る＆全容量を使えない。
 # （選択肢型の設定なので、使いたい選択肢 _4MB を y にする）
 CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+
+# 自作の partitions.csv を使う（storage 区画を足すため）。
+# これが無いと IDF 既定の3区画テーブルが使われ、partitions.csv は無視される。
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"

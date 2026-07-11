@@ -1,0 +1,12 @@
+# ESP32 パーティションテーブル（4MB フラッシュ前提）
+# 注意: このCSVはデータ行に「行内コメント」を書けない（# は行頭のみ可）。
+#       各区画の意味:
+#         nvs(24K)=設定保存 / phy_init(4K)=無線調整 /
+#         factory(1.5M)=アプリ本体 / storage(1M)=Rubyスクリプト置き場(littlefs)
+#       Offset 空欄 = 直前区画の直後に自動配置。テーブル自身は 0x8000。
+#
+# Name,     Type, SubType,  Offset,    Size,       Flags
+nvs,        data, nvs,      0x9000,    0x6000,
+phy_init,   data, phy,      0xf000,    0x1000,
+factory,    app,  factory,  0x10000,   0x180000,
+storage,    data, spiffs,   ,          0x100000,
