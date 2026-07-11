@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-#include "driver/gpio.h"      // GPIO ドライバ
-#include "esp_littlefs.h"     // littlefs マウント
+#include "driver/gpio.h"
+#include "esp_littlefs.h"
 
-#include <mruby.h>           // mruby 本体
-#include <mruby/compile.h>   // mrb_load_string
+#include <mruby.h>
+#include <mruby/compile.h>
 
 // ============================================================================
 // Ruby から呼べる C 関数
